@@ -1,0 +1,29 @@
+[package]
+name = "groyne"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+apply = "0.3.0"
+color-eyre = "0.6.5"
+crossbeam-channel = "0.5.15"
+crossterm = { version = "0.29.0", features = ["event-stream", "serde"] }
+directories = "6.0.0"
+futures = "0.3.32"
+jiff = "0.2.24"
+ratatui = "0.30.0"
+ratatui-hypertile = { version = "0.3.0", features = ["serde"] }
+ratatui-textarea = "0.8.0"
+reqwest = "0.13"
+ringbuffer = "0.16.0"
+serde = { version = "1.0.228", features = ["derive"] }
+signal-hook = "0.4.4"
+tokio = { version = "1.50.0", features = ["full", "signal"] }
+tokio-tungstenite = { version = "0.24.0", features = ["native-tls", "url"] }
+tokio-util = "0.7.18"
+toml = "1.1.0"
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+twitch_api = { git = "https://github.com/twitch-rs/twitch_api/", features = ["helix", "reqwest", "eventsub", "client", "twitch_oauth2", "deser_borrow"] }
+[patch.crates-io.twitch_types]
+git = "https://github.com/twitch-rs/twitch_api"
